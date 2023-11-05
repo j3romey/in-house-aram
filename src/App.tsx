@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const abortController = new AbortController();
 
-    fetch("http://ddragon.leagueoflegends.com/cdn/13.21.1/data/en_US/champion.json", {  signal: abortController.signal })
+    fetch("https://ddragon.leagueoflegends.com/cdn/13.21.1/data/en_US/champion.json", {  signal: abortController.signal })
     .then((response) => response.json())
     .then(json => json.data)
     .then(championsData => {
